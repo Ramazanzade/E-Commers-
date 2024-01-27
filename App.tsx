@@ -20,7 +20,7 @@ const App = () => {
 
 const BigApp = () => {
   return (
-    <Provider store={store}>
+    <Provider store={store} >
       <App />
     </Provider>
   )
