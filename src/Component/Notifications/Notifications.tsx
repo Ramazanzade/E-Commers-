@@ -5,7 +5,7 @@ import Not from '../../assets/icon/notification-bing.svg'
 const Notifications = () => {
   return (
     <View >
-        <Not width={30} height={30}></Not>
+        <Not width={30} height={25}></Not>
     </View>
   )
 }

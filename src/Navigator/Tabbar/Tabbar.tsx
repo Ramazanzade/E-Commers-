@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import tabbarcss from './tabbarcss';
 import HomeScreen from '../Stack/HomeStack/HomeScreen';
 import CatalogScreen from '../Stack/CatalogStack/CatalogScreen';
-import CartScreen from '../Stack/CartStack/CartScreen';
+import BasketScreen from '../Stack/BasketStack/BasketScreen';
 import ProfileScreen from '../Stack/ProfileStack/ProfileScreen';
 import HomeIcon from '../../assets/icon/home-2-outline.svg';
 import CatalogIcon from '../../assets/icon/box-searcha.svg';
@@ -35,7 +35,7 @@ const Tabbar = () => {
             IconComponent = focused ? HomeIcon1 : HomeIcon;
           } else if (route.name === 'CatalogScreen') {
             IconComponent = focused ? CatalogIcon1 : CatalogIcon;
-          } else if (route.name === 'CartScreen') {
+          } else if (route.name === 'BasketScreen') {
             IconComponent = focused ? CartIcon1 : CartIcon;
           } else if (route.name === 'ProfileScreen') {
             IconComponent = focused ? ProfileIcon1 : ProfileIcon;
@@ -48,7 +48,7 @@ const Tabbar = () => {
     >
       <Tab.Screen name="HomeScreen" component={HomeScreen} />
       <Tab.Screen name="CatalogScreen" component={CatalogScreen} />
-      <Tab.Screen name="CartScreen" component={CartScreen} />
+      <Tab.Screen name="BasketScreen" component={BasketScreen} />
       <Tab.Screen name="ProfileScreen" component={ProfileScreen} />
     </Tab.Navigator>
   );

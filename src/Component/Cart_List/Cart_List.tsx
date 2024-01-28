@@ -92,6 +92,7 @@ const Cart_List = () => {
                 keyExtractor={(item) => item.id.toString()}
                 horizontal
                 showsHorizontalScrollIndicator={false}
+                style={{width:SCREEN_WIDTH-40, alignSelf:'center'}}
             />
         </View>
     )

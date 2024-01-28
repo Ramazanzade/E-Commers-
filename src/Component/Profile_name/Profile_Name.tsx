@@ -10,7 +10,7 @@ const Profile_Name = () => {
                 <Text style={{ fontWeight: 'bold', fontSize: 20, color: '#000000' , marginLeft:'7%'}}>Hello, Narmin</Text>
                 <Text style={{ color: 'rgba(208, 213, 221, 1)', fontSize: 15, marginLeft:'7%' }} >2972 Westheimer Rd. Santa A... </Text>
             </View>
-            <View style={{marginRight:'5%'}}>
+            <View style={{marginRight:'5%', alignSelf:'center'}}>
                 <Notifications/>
             </View>
         </View>

@@ -1,14 +1,14 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Cart from '../../../Container/Cart/Cart';
+import Basket from '../../../Container/Basket/Basket';
 const Stack = createNativeStackNavigator();
-const CartScreen = () => {
+const BasketScreen = () => {
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }} >
-            <Stack.Screen name="Cart" component={Cart} />
+            <Stack.Screen name="Basket" component={Basket} />
         </Stack.Navigator>
     )
 }
 
-export default CartScreen
+export default BasketScreen

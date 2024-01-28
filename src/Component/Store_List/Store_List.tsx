@@ -66,7 +66,7 @@ const Store_List = () => {
                 </View>
                 <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginHorizontal: 15, marginTop: 10, marginBottom: 15 }}>
                     <View >
-                        <Text style={{ fontSize: 20, fontWeight:'600', color: 'rgba(29, 41, 57, 1)' }}>₼{item.price}</Text>
+                        <Text style={{ fontSize: 20, fontWeight:'600', color: 'rgba(29, 41, 57, 1)' }}>₼{item.price}+</Text>
                     </View>
                     <View style={{ display: 'flex', flexDirection: 'row', alignSelf:'center' }}>
                         <Text style={{ fontSize: 15, color: 'rgba(52, 64, 84, 1)' }}>25-30 min</Text>
@@ -76,19 +76,14 @@ const Store_List = () => {
         )
     }
     return (
-        <View style={{marginBottom:'10%'}}>
-            <View style={{ width: SCREEN_WIDTH - 20, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignSelf: 'center', marginTop: '3%', marginBottom: '5%' }}>
-                <Text style={{ color: 'rgba(29, 41, 57, 1)', fontSize: 20, fontWeight: '800' }}>Magazines</Text>
-                <TouchableOpacity>
-                    <Text style={{ color: 'rgba(29, 41, 57, 1)', fontSize: 15, fontWeight: '500' }}>See All</Text>
-                </TouchableOpacity>
-            </View>
+        <View style={{marginBottom:'5%'}}>
             <FlatList
                 data={data.products}
                 renderItem={(item) => renderItem(item)}
                 keyExtractor={(item) => item.id.toString()}
                 horizontal
                 showsHorizontalScrollIndicator={false}
+                style={{width:SCREEN_WIDTH-40, alignSelf:'center'}}
             />
         </View>
     )
