@@ -7,6 +7,7 @@ export const END_POINT = {
 export const fetchProducts = async () => {
   try {
     const response = await axios.get(`${BASE_URL}${END_POINT.product}`);
+    // console.log('API Response:', response.data); // Log the response
     return response.data;
   } catch (error) {
     console.error('Error fetching products:', error);

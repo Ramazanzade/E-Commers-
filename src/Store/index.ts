@@ -1,12 +1,13 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { productReducer } from "./Feature/Product/ProductSlice";
 import {advertisingReducer} from './Feature/Advertising/AdvertisingSlice'
-
+import { cupponReducer } from "./Feature/Cuppon/CupponSlice";
 
   
 const rootReducers = combineReducers({
     productReducer,
-    advertisingReducer
+    advertisingReducer,
+    cupponReducer
 })
 
 export const store = configureStore({

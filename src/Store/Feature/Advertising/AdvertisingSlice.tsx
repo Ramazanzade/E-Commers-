@@ -1,10 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit'
 const initialStateValue = [
-        { id: 1, text: 'Corporate compliments', des: 'order from 10 mini bouquets', imge: require('../../../assets/imge/image 1.svg') },
-        { id: 2, text: 'Corporate compliments', des: 'order from 10 mini bouquets', imge: require('../../../assets/imge/image 1.svg') },
-        { id: 3, text: 'Corporate compliments', des: 'order from 10 mini bouquets', imge: require('../../../assets/imge/image 1.svg') },
-        { id: 5, text: 'Corporate compliments', des: 'order from 10 mini bouquets', imge: require('../../../assets/imge/image 1.svg') },
-        { id: 6, text: 'Corporate compliments', des: 'order from 10 mini bouquets', imge: require('../../../assets/imge/image 1.svg') },
+        { id: 1, text: 'Corporate compliments211', des: 'order from 10 mini bouquets'},
+        { id: 2, text: 'Corporate compliments2356', des: 'order from 10 mini bouquets'},
+        { id: 3, text: 'Corporate compliments88', des: 'order from 10 mini bouquets'},
+        { id: 4, text: 'Corporate compliments2392ue', des: 'order from 10 mini bouquets'},
+        { id: 5, text: 'Corporate compliments9', des: 'order from 10 mini bouquets'},
+
 ]
 
 export const advertisingSlice = createSlice({
