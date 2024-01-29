@@ -2,6 +2,7 @@ import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { SCREEN_WIDTH } from '../../Utils/common'
 import AddBasket_List from '../../Component/AddBasket_List/AddBasket_List'
+import CupponAdd_Input from '../../Component/CupponAdd_Input/CupponAdd_Input'
 
 const Cart = () => {
   return (

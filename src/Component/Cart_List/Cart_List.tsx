@@ -1,13 +1,13 @@
 import { View, Text, FlatList, Image, TouchableOpacity } from 'react-native'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchProductsAsync, toggleFavorite } from '../../Store/Feature/Product/ProductSlice';
+import { fetchProductsAsync, productAction, toggleFavorite } from '../../Store/Feature/Product/ProductSlice';
 import Heart from '../../assets/icon/heart.svg'
 import IsHeart from '../../assets/icon/heart-filled.svg'
 import Star from '../../assets/icon/star-filled.svg'
 import Vector from '../../assets/icon/Vector.svg'
 import {SCREEN_WIDTH } from '../../Utils/common';
-const Cart_List = () => {
+const Cart_List = ({navigation}:any) => {
     const data = useSelector((state: any) => state.productReducer)
     const dispatch = useDispatch<any>();
 
@@ -18,9 +18,14 @@ const Cart_List = () => {
     const handle = (data: any) => {
         dispatch(toggleFavorite(data.id))
     }
+
+    const handlepres=(data:any)=>{
+        // dispatch(productAction(data))
+        navigation.navigate('ProductScreen', { screen: 'Product' })
+    }
     const renderItem = ({ item }: any) => {
         return (
-            <TouchableOpacity style={{ marginHorizontal: 20, backgroundColor: 'rgba(255, 255, 255, 1)', borderRadius: 20 }}>
+            <TouchableOpacity style={{ marginHorizontal: 20, backgroundColor: 'rgba(255, 255, 255, 1)', borderRadius: 20 }} onPress={()=>{handlepres(item)}}>
                 <View style={{ position: 'relative', padding: 10 }}>
                     <Image
                         source={{ uri: item.images[0] }}
