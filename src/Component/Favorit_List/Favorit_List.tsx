@@ -7,7 +7,7 @@ import IsHeart from '../../assets/icon/heart-filled.svg'
 import Star from '../../assets/icon/star-filled.svg'
 import Vector from '../../assets/icon/Vector.svg'
 import { SCREEN_WIDTH } from '../../Utils/common';
-const Cart_List = ({ navigation }: any) => {
+const Favorit_List = ({ navigation }: any) => {
     const data = useSelector((state: any) => state.productReducer)
     const dispatch = useDispatch<any>();
 
@@ -26,17 +26,17 @@ const Cart_List = ({ navigation }: any) => {
     }
     const renderItem = ({ item }: any) => {
         return (
-            <TouchableOpacity style={{ marginHorizontal: 20, backgroundColor: 'rgba(255, 255, 255, 1)', borderRadius: 20 }} onPress={() => {handlepres(item)}}>
+            <TouchableOpacity style={{ marginHorizontal: 20, backgroundColor: 'rgba(255, 255, 255, 1)', borderRadius: 20, marginTop:'5%' }} onPress={() => {handlepres(item)}}>
                 <View style={{ position: 'relative', padding: 10 }}>
                     <Image
                         source={{ uri: item.images[0] }}
-                        style={{ width: 200, height: 150, borderRadius: 10 }}
+                        style={{ width: 150, height: 150, borderRadius: 10 }}
                     />
                     <TouchableOpacity
                         style={{
                             position: 'absolute',
                             top: 15,
-                            right: 15,
+                            right: 25,
                             zIndex: 1,
                             width: 30,
                             height: 30,
@@ -58,7 +58,7 @@ const Cart_List = ({ navigation }: any) => {
                 </View>
                 <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
                     <View>
-                        <Text style={{ fontSize: 15, color: 'rgba(52, 64, 84, 1)' }}>{item.title.length > 15 ? `${item.title.substring(0, 15)}...` : item.title}</Text>
+                        <Text style={{ fontSize: 15, color: 'rgba(52, 64, 84, 1)' }}>{item.title.length > 10 ? `${item.title.substring(0, 10)}...` : item.title}</Text>
                     </View>
                     <View style={{ display: 'flex', flexDirection: 'row' }}>
                         <Star color={'green'} width={30} height={25} />
@@ -90,12 +90,11 @@ const Cart_List = ({ navigation }: any) => {
                 data={data.products}
                 renderItem={(item) => renderItem(item)}
                 keyExtractor={(item) => item.id.toString()}
-                horizontal
                 showsHorizontalScrollIndicator={false}
-                style={{ width: SCREEN_WIDTH - 40, alignSelf: 'center' }}
+                numColumns={2}
             />
         </View>
     )
 }
 
-export default Cart_List
+export default Favorit_List

@@ -2,9 +2,10 @@ import { View, Text, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 import { SCREEN_HEIGHT, SCREEN_WIDTH } from '../../Utils/common'
 import Reviews from '../../assets/icon/star-.svg'
+import { useSelector } from 'react-redux'
 const Product_Detail = () => {
     const [activeTab, setActiveTab] = useState('Description');
-
+    const data = useSelector((state: any) => state.productReducer.value);
     const handleTabPress = (tab: any) => {
         setActiveTab(tab);
     };

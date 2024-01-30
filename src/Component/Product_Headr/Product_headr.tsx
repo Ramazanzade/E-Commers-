@@ -5,11 +5,14 @@ import Imge from '../../assets/imge/1.svg';
 import { SCREEN_HEIGHT, SCREEN_WIDTH } from '../../Utils/common';
 import Left from '../../assets/icon/arrow-left.svg'
 import Heart from '../../assets/icon/heart-filled.svg'
-const Product_headr = () => {
+import { toggleFavorite } from '../../Store/Feature/Product/ProductSlice';
+import IsHeart from '../../assets/icon/heart.svg'
+const Product_headr = ({ navigation }: any) => {
     const data = useSelector((state: any) => state.advertisingReducer.value);
     const [currentIndex, setCurrentIndex] = useState<any>(0);
     const flatListRef = useRef<FlatList>(null);
-
+    const dispatch = useDispatch<any>();
+    const [isFavorite,setisFavorite]=useState(false)
     const circles = data.map((_: any, index: number) => (
         <View
             key={index}
@@ -42,9 +45,9 @@ const Product_headr = () => {
                         justifyContent: 'space-around',
                     }}>
                         <View style={{ alignSelf: 'center', alignContent: 'flex-end' }}>
-                            <View style={{ flexDirection: 'row', marginTop: '95%', marginLeft: '18%' }}>{circles}</View>
+                            <View style={{ flexDirection: 'row', marginTop: '110%', marginLeft: '18%' }}>{circles}</View>
                         </View>
-                        <View style={{ position: 'absolute', zIndex: -1,marginLeft:'-5%' }}>
+                        <View style={{ position: 'absolute', zIndex: -1, marginLeft: '-5%' }}>
                             <Imge />
                         </View>
                     </View>
@@ -53,15 +56,24 @@ const Product_headr = () => {
         );
     };
 
-
+    const goback = () => {
+        navigation.navigate('Tabbar', { screen: 'HomeScreen' })
+    }
+    const handle = () => {
+        setisFavorite(!isFavorite);
+    }
     return (
         <View style={{}}>
-              <View style={{position:'absolute',zIndex:2,display:'flex',flexDirection:'row',justifyContent:'space-between',width:SCREEN_WIDTH-40,alignSelf:'center',marginTop:'5%'}}>
-                <TouchableOpacity style={{backgroundColor:'rgba(255, 255, 255, 1)',borderRadius:30,padding:'2%'}}>
-                    <Left height={30} width={30} />
+            <View style={{ position: 'absolute', zIndex: 2, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: SCREEN_WIDTH - 40, alignSelf: 'center', marginTop: '5%' }}>
+                <TouchableOpacity style={{ backgroundColor: 'rgba(255, 255, 255, 1)', borderRadius: 30, padding: '2%' }} onPress={() => goback()}>
+                    <Left height={35} width={35} />
                 </TouchableOpacity>
-                <TouchableOpacity style={{backgroundColor:'rgba(255, 255, 255, 1)',borderRadius:30,padding:'2%'}}>
-                    <Heart height={30} width={30}/>
+                <TouchableOpacity style={{ backgroundColor: 'rgba(255, 255, 255, 1)', borderRadius: 30, padding: '2%' }} onPress={()=>handle()}>
+                    {isFavorite ? (
+                            <IsHeart width={35} height={35} />
+                    ) : (
+                            <Heart width={35} height={35} />
+                    )}
                 </TouchableOpacity>
             </View>
             <FlatList
