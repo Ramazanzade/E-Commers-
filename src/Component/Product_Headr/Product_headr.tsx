@@ -57,7 +57,7 @@ const Product_headr = ({ navigation }: any) => {
     };
 
     const goback = () => {
-        navigation.navigate('Tabbar', { screen: 'HomeScreen' })
+        navigation.navigate('HomeScreen')
     }
     const handle = () => {
         setisFavorite(!isFavorite);

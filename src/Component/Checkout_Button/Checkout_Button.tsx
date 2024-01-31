@@ -14,7 +14,7 @@ const Checkout_Button = () => {
 
     return (
         <View>
-            <TouchableOpacity style={{width:SCREEN_WIDTH-60,backgroundColor:'red',alignSelf:'center',borderRadius:20,marginTop:'5%'}} onPress={handelcheckout}>
+            <TouchableOpacity style={{width:SCREEN_WIDTH-60,backgroundColor:'red',alignSelf:'center',borderRadius:20,marginTop:'1.5%', marginBottom:'5%'}} onPress={handelcheckout}>
                 {loading ? (
                     <ActivityIndicator size='large' color="white" style={{}} />
                 ) : (<Text style={{fontSize:20,color:'rgba(255, 255, 255, 1)',textAlign:'center',padding:'3%'}}>Checkout</Text>)}

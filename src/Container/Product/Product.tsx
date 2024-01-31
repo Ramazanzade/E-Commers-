@@ -7,11 +7,11 @@ import Cart_List from '../../Component/Cart_List/Cart_List'
 import { toFormData } from 'axios'
 import AddtoBasket_Button from '../../Component/AddtoBasket_Button/AddtoBasket_Button'
 
-const Product = () => {
+const Product = ({navigation}:any) => {
   return (
     <ScrollView>
       <View>
-        <Product_headr />
+        <Product_headr navigation={navigation}/>
         <View style={{ borderTopLeftRadius: 20, backgroundColor: 'rgba(249, 250, 251, 1)', borderTopRightRadius: 20, width: SCREEN_WIDTH }}>
           <Product_Detail />
         </View>
@@ -22,7 +22,7 @@ const Product = () => {
               <Text style={{ color: 'rgba(29, 41, 57, 1)', fontSize: 15, fontWeight: '500' }}>See All</Text>
             </TouchableOpacity>
           </View>
-          <Cart_List />
+          <Cart_List  navigation={navigation}/>
         </View>
         <View style={{marginTop:'5%'}}>
           <View style={{ width: SCREEN_WIDTH - 50, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignSelf: 'center', marginTop: '3%', marginBottom: '5%'}}>
@@ -31,7 +31,7 @@ const Product = () => {
               <Text style={{ color: 'rgba(29, 41, 57, 1)', fontSize: 15, fontWeight: '500' }}>See All</Text>
             </TouchableOpacity>
           </View>
-          <Cart_List />
+          <Cart_List  navigation={navigation}/>
         </View>
         <AddtoBasket_Button/>
       </View>

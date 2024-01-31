@@ -1,13 +1,13 @@
 import { View, Text, FlatList, Image, TouchableOpacity } from 'react-native'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchProductsAsync, toggleFavorite } from '../../Store/Feature/Product/ProductSlice';
+import { fetchProductsAsync, productAction, toggleFavorite } from '../../Store/Feature/Product/ProductSlice';
 import Heart from '../../assets/icon/heart.svg'
 import IsHeart from '../../assets/icon/heart-filled.svg'
 import Star from '../../assets/icon/star-filled.svg'
 import Vector from '../../assets/icon/Vector.svg'
 import { SCREEN_WIDTH } from '../../Utils/common';
-const Store_List = () => {
+const Store_List = ({ navigation }: any) => {
     const data = useSelector((state: any) => state.productReducer)
     const dispatch = useDispatch<any>();
 
@@ -18,9 +18,14 @@ const Store_List = () => {
     const handle = (data: any) => {
         dispatch(toggleFavorite(data.id))
     }
+    const handlepres = (data: any) => {
+        // dispatch(productAction(data))        
+        navigation.navigate('ProductScreen', { productId: data.id });
+
+    }
     const renderItem = ({ item }: any) => {
         return (
-            <TouchableOpacity style={{ marginHorizontal: 20, backgroundColor: 'rgba(255, 255, 255, 1)', borderRadius: 20 }}>
+            <TouchableOpacity style={{ marginHorizontal: 20, backgroundColor: 'rgba(255, 255, 255, 1)', borderRadius: 20 }} onPress={() => { handlepres(item) }}>
                 <View style={{ position: 'relative', padding: 10 }}>
                     <Image
                         source={{ uri: item.images[0] }}
@@ -53,22 +58,24 @@ const Store_List = () => {
                 <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
                     <View style={{ display: 'flex', flexDirection: 'row', marginTop: 10 }}>
                         <View >
-                            <Text style={{ fontSize: 20, color: 'rgba(52, 64, 84, 1)' }}>{item.category.name.length > 15 ? `${item.category.name.substring(0, 15)}...` : item.category.name}...</Text>
+                            <Text style={{ fontSize: 15, color: 'rgba(52, 64, 84, 1)' }}>{item.category.name.length > 15 ? `${item.category.name.substring(0, 15)}...` : item.category.name}...</Text>
                         </View>
-                        <View style={{ display: 'flex', flexDirection: 'row', marginLeft: 10, marginTop:'2%' }}>
+                        <View style={{ display: 'flex', flexDirection: 'row', marginLeft: 10, marginTop: '2%' }}>
                             <Vector color={'green'} width={25} height={20} />
                         </View>
                     </View>
-                    <View style={{ display: 'flex', flexDirection: 'row' , marginTop:'3%'}}>
-                        <Star color={'green'} width={30} height={25} />
+                    <View style={{ display: 'flex', flexDirection: 'row', marginTop: '4%' }}>
+                        <View style={{marginTop:'2%'}}>
+                            <Star color={'green'} width={30} height={25} />
+                        </View>
                         <Text style={{ fontSize: 17, color: 'rgba(52, 64, 84, 1)', marginLeft: 3, alignSelf: 'center' }} >{item.category.id}</Text>
                     </View>
                 </View>
                 <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginHorizontal: 15, marginTop: 10, marginBottom: 15 }}>
                     <View >
-                        <Text style={{ fontSize: 20, fontWeight:'600', color: 'rgba(29, 41, 57, 1)' }}>₼{item.price}+</Text>
+                        <Text style={{ fontSize: 20, fontWeight: '600', color: 'rgba(29, 41, 57, 1)' }}>₼{item.price}+</Text>
                     </View>
-                    <View style={{ display: 'flex', flexDirection: 'row', alignSelf:'center' }}>
+                    <View style={{ display: 'flex', flexDirection: 'row', alignSelf: 'center' }}>
                         <Text style={{ fontSize: 15, color: 'rgba(52, 64, 84, 1)' }}>25-30 min</Text>
                     </View>
                 </View>
@@ -76,14 +83,14 @@ const Store_List = () => {
         )
     }
     return (
-        <View style={{marginBottom:'5%'}}>
+        <View style={{ marginBottom: '5%' }}>
             <FlatList
                 data={data.products}
                 renderItem={(item) => renderItem(item)}
                 keyExtractor={(item) => item.id.toString()}
                 horizontal
                 showsHorizontalScrollIndicator={false}
-                style={{width:SCREEN_WIDTH-40, alignSelf:'center'}}
+                style={{ width: SCREEN_WIDTH - 40, alignSelf: 'center' }}
             />
         </View>
     )

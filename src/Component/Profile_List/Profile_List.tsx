@@ -17,7 +17,7 @@ import Notifications from '../../assets/icon/notification-bing.svg'
 import Support from '../../assets/icon/card-pos.svg'
 import Help from '../../assets/icon/message-question.svg'
 import Campaigns from '../../assets/icon/percentage-square.svg'
-const Profile_List = () => {
+const Profile_List = ({navigation}:any) => {
     const data = useSelector((state: any) => state.ProfileListReducer.value)
     const icons = {
         truck: Order,
@@ -43,8 +43,13 @@ const Profile_List = () => {
       
     const renderitem = ({ item }: { item: Item }) => {
         const Icon = icons[item.icon]; 
+        const onPress = () => {
+            if (item.icon === 'heart') {
+                navigation.navigate('Favorit'); 
+            }
+        };
         return (
-            <TouchableOpacity style={{ display: 'flex', flexDirection: 'row', width: SCREEN_WIDTH - 40, alignSelf: 'center', justifyContent: 'space-between', borderRadius: 10, marginVertical: '2%', padding: '3%' }}>
+            <TouchableOpacity style={{ display: 'flex', flexDirection: 'row', width: SCREEN_WIDTH - 40, alignSelf: 'center', justifyContent: 'space-between', borderRadius: 10, marginVertical: '2%', padding: '3%' }} onPress={()=>onPress()}>
                 <View style={{ display: 'flex', flexDirection: 'row' }}>
                     <View style={{backgroundColor:'rgba(242, 244, 247, 1)',padding:'5%', borderRadius:5,}}>
                       <Icon></Icon>

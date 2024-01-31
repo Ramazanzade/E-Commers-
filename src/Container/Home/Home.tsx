@@ -30,7 +30,7 @@ const Home = ({navigation}:any) => {
           <Text style={{ color: 'rgba(29, 41, 57, 1)', fontSize: 15, fontWeight: '500' }}>See All</Text>
         </TouchableOpacity>
       </View>
-      <Store_List />
+      <Store_List navigation={navigation} />
     </ScrollView>
   )
 }

@@ -47,11 +47,11 @@ const Favorit_List = ({ navigation }: any) => {
                     >
                         {item.isFavorite ? (
                             <View style={{ alignSelf: 'center', marginTop: '9%' }}>
-                                <IsHeart width={25} height={25} />
+                                <Heart width={25} height={25} />
                             </View>
                         ) : (
                             <View style={{ alignSelf: 'center', marginTop: '9%' }}>
-                                <Heart width={25} height={25} />
+                                <IsHeart width={25} height={25} />
                             </View>
                         )}
                     </TouchableOpacity>

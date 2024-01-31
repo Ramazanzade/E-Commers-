@@ -17,6 +17,7 @@ const Cart_List = ({ navigation }: any) => {
     }, [dispatch]);
     const handle = (data: any) => {
         dispatch(toggleFavorite(data.id))
+
     }
 
     const handlepres = (data: any) => {

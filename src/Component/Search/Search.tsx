@@ -11,7 +11,8 @@ const Search = () => {
                 onChangeText={setsearch}
                 value={search}
                 placeholder='Search...'
-                style={{ borderColor: 'rgba(234, 234, 234, 1)', borderWidth: 2, borderRadius: 20, textAlign: 'left', paddingLeft: '5%', fontSize: 15, width: SCREEN_WIDTH - 20, alignSelf: 'center', marginTop: '5%' }}
+                placeholderTextColor='rgba(41, 41, 41, 1)'
+                style={{ borderColor: 'rgba(234, 234, 234, 1)', borderWidth: 2, borderRadius: 20, textAlign: 'left', paddingLeft: '5%', fontSize: 15, width: SCREEN_WIDTH - 20, alignSelf: 'center', marginTop: '5%', color:'rgba(41, 41, 41, 1)'}}
             />
             <View style={{ display: 'flex', alignSelf: 'flex-end', position: 'absolute', marginRight: '15%', marginTop: '8%' }}>
                 <Searchsvg />
