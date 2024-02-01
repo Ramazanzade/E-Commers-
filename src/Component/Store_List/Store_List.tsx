@@ -25,7 +25,7 @@ const Store_List = ({ navigation }: any) => {
     }
     const renderItem = ({ item }: any) => {
         return (
-            <TouchableOpacity style={{ marginHorizontal: 20, backgroundColor: 'rgba(255, 255, 255, 1)', borderRadius: 20 }} onPress={() => { handlepres(item) }}>
+            <TouchableOpacity style={{ marginHorizontal: 5, backgroundColor: 'rgba(255, 255, 255, 1)', borderRadius: 20 }} onPress={() => { handlepres(item) }}>
                 <View style={{ position: 'relative', padding: 10 }}>
                     <Image
                         source={{ uri: item.images[0] }}
