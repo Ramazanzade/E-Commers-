@@ -54,8 +54,8 @@ const Profile_List = ({navigation}:any) => {
                     <View style={{backgroundColor:'rgba(242, 244, 247, 1)',padding:'5%', borderRadius:5,}}>
                       <Icon></Icon>
                     </View >
-                    <View style={{alignSelf:'center',marginLeft:'5%'}}>
-                        <Text style={{ fontSize: 20, color: 'rgba(29, 41, 57, 1)' , textAlign:'center'}}>{item.text}</Text>
+                    <View style={{alignSelf:'center',marginLeft:'10%'}}>
+                        <Text style={{ fontSize: 20, color: 'rgba(29, 41, 57, 1)' , textAlign:'center', fontWeight:'bold'}}>{item.text}</Text>
                     </View>
                 </View>
                 <View style={{alignSelf:'center'}}>

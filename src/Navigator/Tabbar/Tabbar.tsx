@@ -19,7 +19,7 @@ const Tab = createBottomTabNavigator();
 const Tabbar = () => {
   return (
     <Tab.Navigator
-      screenOptions={({ route }:any) => ({
+      screenOptions={({ route, focused}: any) => ({
         headerShown: false,
         tabBarStyle: {
           height: 60,
@@ -28,28 +28,29 @@ const Tabbar = () => {
             height: 0,
           },
         },
-        tabBarIcon: ({ color, size, focused }:any) => {
+        tabBarIcon: ({ color, size, focused }: any) => {
           let IconComponent: any;
 
-          if (route.name === 'HomeScreen') {
+          if (route.name === 'Home') {
             IconComponent = focused ? HomeIcon1 : HomeIcon;
-          } else if (route.name === 'CatalogScreen') {
+          } else if (route.name === 'Catalog') {
             IconComponent = focused ? CatalogIcon1 : CatalogIcon;
-          } else if (route.name === 'BasketScreen') {
+          } else if (route.name === 'Basket') {
             IconComponent = focused ? CartIcon1 : CartIcon;
-          } else if (route.name === 'ProfileScreen') {
+          } else if (route.name === 'Profile') {
             IconComponent = focused ? ProfileIcon1 : ProfileIcon;
           }
 
-          return <IconComponent color={focused ? "#306B60" : "gray"} size={35} />;
+          return <IconComponent color={focused ? "green" : "red"} size={35} />;
         },
-        tabBarShowLabel: false,
+        tabBarShowLabel: true,      
+        
       })}
     >
-      <Tab.Screen name="HomeScreen" component={HomeScreen} />
-      <Tab.Screen name="CatalogScreen" component={CatalogScreen} />
-      <Tab.Screen name="BasketScreen" component={BasketScreen} />
-      <Tab.Screen name="ProfileScreen" component={ProfileScreen} />
+      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="Catalog" component={CatalogScreen} />
+      <Tab.Screen name="Basket" component={BasketScreen} />
+      <Tab.Screen name="Profile" component={ProfileScreen} />
     </Tab.Navigator>
   );
 }

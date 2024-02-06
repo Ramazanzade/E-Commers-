@@ -47,12 +47,12 @@ const Cart_List = ({ navigation }: any) => {
                         onPress={() => handle(item)}
                     >
                         {item.isFavorite ? (
-                            <View style={{ alignSelf: 'center', marginTop: '9%' }}>
-                                <IsHeart width={25} height={25} />
+                            <View style={{ alignSelf: 'center', marginTop: '11%' }}>
+                                <IsHeart width={20} height={20} />
                             </View>
                         ) : (
-                            <View style={{ alignSelf: 'center', marginTop: '9%' }}>
-                                <Heart width={25} height={25} />
+                            <View style={{ alignSelf: 'center', marginTop: '12%' }}>
+                                <Heart width={20} height={20} />
                             </View>
                         )}
                     </TouchableOpacity>

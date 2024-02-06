@@ -19,7 +19,7 @@ const Favorit = ({navigation}:any) => {
                     </TouchableOpacity>
                     <Text style={{ fontWeight: 'bold', fontSize: 20, color: '#000000', marginLeft: '7%', alignSelf:'center', textAlign:'center' }}>Favorit</Text>
                 </View>
-                <View style={{ marginRight: '5%', alignSelf: 'center' }}>
+                <View style={{ marginRight: '3%', alignSelf: 'center' }}>
                     <Notifications />
                 </View>
             </View>

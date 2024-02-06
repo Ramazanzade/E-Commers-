@@ -11,12 +11,12 @@ import { SCREEN_WIDTH } from '../../Utils/common'
 
 const Home = ({navigation}:any) => {
   return (
-    <ScrollView>
+    <ScrollView style={{}}>
       <Profile_Name />
       <Search />
       <Order_List />
       <Advertising_List />
-      <View style={{ width: SCREEN_WIDTH - 20, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignSelf: 'center', marginTop: '3%', marginBottom: '5%' }}>
+      <View style={{ width: SCREEN_WIDTH - 40, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignSelf: 'center', marginTop: '3%', marginBottom: '5%' }}>
         <Text style={{ color: 'rgba(29, 41, 57, 1)', fontSize: 20, fontWeight: '800' }}>Order Again</Text>
         <TouchableOpacity>
           <Text style={{ color: 'rgba(29, 41, 57, 1)', fontSize: 15, fontWeight: '500' }}>See All</Text>

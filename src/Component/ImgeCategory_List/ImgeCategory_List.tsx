@@ -18,7 +18,7 @@ const ImgeCategory_List = () => {
         }
         uniqueCategories.add(item.category.name);
         return (
-            <TouchableOpacity style={{ display: 'flex', flexDirection: 'column', backgroundColor: 'rgba(242, 244, 247, 1)', borderRadius: 10, marginHorizontal: 10,}}>
+            <TouchableOpacity style={{ display: 'flex', flexDirection: 'column', backgroundColor: '#F2F4F7', borderRadius: 10, marginHorizontal: 10,}}>
                 <Image
                     source={{ uri: item.category.image }}
                     style={{ width: 100, height: 100, borderRadius: 50 }} />
@@ -27,7 +27,7 @@ const ImgeCategory_List = () => {
         )
     }
     return (
-        <View>
+        <View style={{backgroundColor:'#F2F4F7'}}>
             <FlatList
                 data={data.products}
                 renderItem={(item) => renderItem(item)}

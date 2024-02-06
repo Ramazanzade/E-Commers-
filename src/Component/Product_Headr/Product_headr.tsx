@@ -12,7 +12,7 @@ const Product_headr = ({ navigation }: any) => {
     const [currentIndex, setCurrentIndex] = useState<any>(0);
     const flatListRef = useRef<FlatList>(null);
     const dispatch = useDispatch<any>();
-    const [isFavorite,setisFavorite]=useState(false)
+    const [isFavorite, setisFavorite] = useState(false)
     const circles = data.map((_: any, index: number) => (
         <View
             key={index}
@@ -36,7 +36,7 @@ const Product_headr = ({ navigation }: any) => {
                         display: 'flex',
                         flexDirection: 'column',
                         backgroundColor: 'rgba(254, 163, 180, 1)',
-                        height: SCREEN_HEIGHT / 3.5
+                        height: SCREEN_HEIGHT / 3.3
                     }}
                 >
                     <View style={{
@@ -63,16 +63,20 @@ const Product_headr = ({ navigation }: any) => {
         setisFavorite(!isFavorite);
     }
     return (
-        <View style={{}}>
+        <View style={{position:'absolute',zIndex:-1}}>
             <View style={{ position: 'absolute', zIndex: 2, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: SCREEN_WIDTH - 40, alignSelf: 'center', marginTop: '5%' }}>
-                <TouchableOpacity style={{ backgroundColor: 'rgba(255, 255, 255, 1)', borderRadius: 30, padding: '2%' }} onPress={() => goback()}>
-                    <Left height={35} width={35} />
+                <TouchableOpacity style={{ backgroundColor: 'rgba(255, 255, 255, 1)', borderRadius: 30, padding: '2%', width: 45, height: 43 }} onPress={() => goback()}>
+                    <Left height={30} width={30} />
                 </TouchableOpacity>
-                <TouchableOpacity style={{ backgroundColor: 'rgba(255, 255, 255, 1)', borderRadius: 30, padding: '2%' }} onPress={()=>handle()}>
+                <TouchableOpacity style={{ backgroundColor: 'rgba(255, 255, 255, 1)', borderRadius: 30, padding: '2%', width: 45, height: 43, alignSelf: 'center' }} onPress={() => handle()}>
                     {isFavorite ? (
-                            <IsHeart width={35} height={35} />
+                        <View style={{ alignSelf: 'center', alignItems: 'center', alignContent: 'center' }}>
+                            <IsHeart width={25} height={25} />
+                        </View>
                     ) : (
-                            <Heart width={35} height={35} />
+                        <View style={{ alignSelf: 'center', alignItems: 'center', alignContent: 'center' }}>
+                            <Heart width={25} height={25} />
+                        </View>
                     )}
                 </TouchableOpacity>
             </View>

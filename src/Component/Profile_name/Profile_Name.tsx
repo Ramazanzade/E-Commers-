@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux'
 const Profile_Name = () => {
     const data=useSelector((state:any)=>state.userReducer.value[0])
     return (
-        <View style={{ width: SCREEN_WIDTH , display:'flex', flexDirection:'row', justifyContent:'space-between', marginTop:'5%'}}>
+        <View style={{ width: SCREEN_WIDTH , display:'flex', flexDirection:'row', justifyContent:'space-between', marginTop:'10%'}}>
             <View>
                 <Text style={{ fontWeight: 'bold', fontSize: 20, color: '#000000' , marginLeft:'7%'}}>Hello, {data.name}</Text>
                 <Text style={{ color: 'rgba(208, 213, 221, 1)', fontSize: 15, marginLeft:'7%' }} >{data.des.length > 25 ? `${data.des.substring(0, 25)}...` : data.des}</Text>

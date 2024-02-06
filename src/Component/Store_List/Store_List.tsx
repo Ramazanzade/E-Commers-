@@ -25,7 +25,13 @@ const Store_List = ({ navigation }: any) => {
     }
     const renderItem = ({ item }: any) => {
         return (
-            <TouchableOpacity style={{ marginHorizontal: 5, backgroundColor: 'rgba(255, 255, 255, 1)', borderRadius: 20 }} onPress={() => { handlepres(item) }}>
+            <TouchableOpacity style={{
+                marginHorizontal: 5, backgroundColor: 'rgba(255, 255, 255, 1)', borderRadius: 20, shadowColor: '#F2F4F7',
+                shadowOffset: { width: 10, height: 20 },
+                shadowOpacity: 1.25, 
+                shadowRadius: 30, 
+                elevation: 5
+            }} onPress={() => { handlepres(item) }}>
                 <View style={{ position: 'relative', padding: 10 }}>
                     <Image
                         source={{ uri: item.images[0] }}
@@ -45,12 +51,12 @@ const Store_List = ({ navigation }: any) => {
                         onPress={() => handle(item)}
                     >
                         {item.isFavorite ? (
-                            <View style={{ alignSelf: 'center', marginTop: '9%' }}>
-                                <IsHeart width={25} height={25} />
+                            <View style={{ alignSelf: 'center', marginTop: '13%' }}>
+                                <IsHeart width={20} height={20} />
                             </View>
                         ) : (
-                            <View style={{ alignSelf: 'center', marginTop: '9%' }}>
-                                <Heart width={25} height={25} />
+                            <View style={{ alignSelf: 'center', marginTop: '13%' }}>
+                                <Heart width={20} height={20} />
                             </View>
                         )}
                     </TouchableOpacity>
@@ -65,7 +71,7 @@ const Store_List = ({ navigation }: any) => {
                         </View>
                     </View>
                     <View style={{ display: 'flex', flexDirection: 'row', marginTop: '4%' }}>
-                        <View style={{marginTop:'2%'}}>
+                        <View style={{ marginTop: '2%' }}>
                             <Star color={'green'} width={30} height={25} />
                         </View>
                         <Text style={{ fontSize: 17, color: 'rgba(52, 64, 84, 1)', marginLeft: 3, alignSelf: 'center' }} >{item.category.id}</Text>
@@ -83,14 +89,14 @@ const Store_List = ({ navigation }: any) => {
         )
     }
     return (
-        <View style={{ marginBottom: '5%' }}>
+        <View style={{ marginBottom: '5%', backgroundColor: '#F2F4F7' }}>
             <FlatList
                 data={data.products}
                 renderItem={(item) => renderItem(item)}
                 keyExtractor={(item) => item.id.toString()}
                 horizontal
                 showsHorizontalScrollIndicator={false}
-                style={{ width: SCREEN_WIDTH - 40, alignSelf: 'center' }}
+                style={{ width: SCREEN_WIDTH - 50, alignSelf: 'center' }}
             />
         </View>
     )

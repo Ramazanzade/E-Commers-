@@ -13,7 +13,7 @@ const Cuppon_List = () => {
                     style={{
                         display: 'flex',
                         flexDirection:'column',
-                        backgroundColor: 'rgba(242, 244, 247, 1)',
+                        backgroundColor: 'rgb(228, 231, 236)',
                         borderRadius: 20,
                         marginLeft: 20,
                     }}

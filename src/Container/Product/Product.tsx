@@ -11,8 +11,8 @@ const Product = ({navigation}:any) => {
   return (
     <ScrollView>
       <View>
-        <Product_headr navigation={navigation}/>
-        <View style={{ borderTopLeftRadius: 20, backgroundColor: 'rgba(249, 250, 251, 1)', borderTopRightRadius: 20, width: SCREEN_WIDTH }}>
+        <Product_headr navigation={navigation} />
+        <View style={{width: SCREEN_WIDTH , marginTop:'57%'}}>
           <Product_Detail />
         </View>
         <View style={{}}>

@@ -29,8 +29,8 @@ const Order_List = () => {
                                 <Text style={{ fontSize: 17, fontWeight: '800', color: '#000000' }}>Recipient: Narmin A.</Text>
                             </View>
                             <View style={{marginTop:height/4}}>
-                                <Text style={{ fontSize: 14, fontWeight: '800', color: '#000000' }}>Delivery: December 24</Text>
-                                <Text style={{ fontSize: 17, fontWeight: '800', color: '#000000' }}>From 9:00 - 12:00</Text>
+                                <Text style={{ fontSize: 14, fontWeight: '400', color: '#000000' }}>Delivery: December 24</Text>
+                                <Text style={{ fontSize: 17, fontWeight: '400', color: '#000000' }}>From 9:00 - 12:00</Text>
                             </View>
                         </View>
                     </View>

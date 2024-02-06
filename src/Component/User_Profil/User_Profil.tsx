@@ -7,7 +7,7 @@ import { SCREEN_WIDTH } from '../../Utils/common'
 const User_Profil = () => {
     const data=useSelector((state:any)=>state.userReducer.value[0])
     return (
-        <View style={{display:'flex',flexDirection:'row', width:SCREEN_WIDTH-20,alignSelf:'center',marginTop:'5%', backgroundColor:'rgba(255, 255, 255, 255)'}}>
+        <View style={{display:'flex',flexDirection:'row', width:SCREEN_WIDTH-40,alignSelf:'center',marginTop:'5%', backgroundColor:'rgba(255, 255, 255, 255)'}}>
             <View>
                 <Userimge />
             </View>

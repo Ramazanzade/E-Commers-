@@ -38,16 +38,19 @@ const AddtoBasket_Button = () => {
                 </TouchableOpacity>
             </View>
             <View>
-                <TouchableOpacity style={{ backgroundColor: 'red', alignSelf: 'center', borderRadius: 20, marginTop: '2%', paddingVertical:20,width: 150,  }} onPress={()=>{handelcheckout()}} disabled={loading}>
-                    <View style={{ flexDirection: 'row', justifyContent: 'center', alignSelf: 'center' }}>
-                        {loading ? (
-                            <ActivityIndicator size='small' color="white" style={{alignSelf:'center', marginTop:'5%'}} />
-                        ) : (
-                            <Text style={{ fontSize: 20, color: 'rgba(255, 255, 255, 1)', textAlign: 'center' }}>
-                                Add to Cart
-                            </Text>
-                        )}
-                    </View>
+                <TouchableOpacity style={{
+                    backgroundColor: 'rgba(246, 61, 104, 1)', alignSelf: 'center', borderRadius: 60, marginTop: '2%', paddingHorizontal: '15%',
+                    paddingVertical: '5%',
+                    height: 45,
+                    width:150
+                }} onPress={() => { handelcheckout() }} disabled={loading}>
+                    {loading ? (
+                        <ActivityIndicator size='small' color="white" style={{ alignSelf: 'center' , marginTop:'5%'}} />
+                    ) : (
+                        <Text style={{ fontSize: 18, color: 'rgba(255, 255, 255, 1)', textAlign: 'center',fontWeight:'600' }}>
+                            Add to Cart
+                        </Text>
+                    )}
                 </TouchableOpacity>
             </View>
         </View>

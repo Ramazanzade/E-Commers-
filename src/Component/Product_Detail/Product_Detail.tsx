@@ -10,7 +10,7 @@ const Product_Detail = () => {
         setActiveTab(tab);
     };
     return (
-        <View style={{}}>
+        <View style={{ borderTopLeftRadius: 40, borderTopRightRadius: 40, backgroundColor: 'rgba(249, 250, 251, 1)' }}>
             <View style={{ height: 8, width: 50, backgroundColor: 'rgba(152, 162, 179, 1)', alignSelf: 'center', marginTop: '3%', marginBottom: '5%', borderRadius: 60 }}></View>
             <View style={{ width: SCREEN_WIDTH - 40, alignSelf: 'center' }}>
                 <Text style={{ fontWeight: '700', fontSize: 25, color: 'rgba(29, 41, 57, 1)' }}>Souly - Beauty In Pink</Text>
@@ -18,7 +18,7 @@ const Product_Detail = () => {
             </View>
             <View style={{ display: "flex", flexDirection: 'row', width: SCREEN_WIDTH - 40, alignSelf: 'center', marginTop: '5%' }}>
                 <View style={{ display: 'flex', flexDirection: 'row', backgroundColor: 'rgba(246, 61, 104, 1)', padding: '1%', borderRadius: 20 }}>
-                    <View style={{alignSelf:'center'}}>
+                    <View style={{ alignSelf: 'center' }}>
                         <Reviews width={25} height={25} />
                     </View>
                     <Text style={{ fontSize: 20, fontWeight: '600', marginLeft: '1%', paddingHorizontal: '2%', color: 'rgba(255, 255, 255, 1)' }}>4.6</Text>
@@ -39,7 +39,7 @@ const Product_Detail = () => {
                 <View style={{ width: SCREEN_WIDTH - 60, alignSelf: 'center', marginTop: '5%' }}>
                     {activeTab === 'Description' ? (
                         <View>
-                            <Text style={{ color: 'rgba(148, 148, 148, 1)' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id es Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to</Text>
+                            <Text style={{ color: 'rgba(148, 148, 148, 1)' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu{"\n\n"}Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id es Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, to</Text>
                         </View>
                     ) : (
                         <View>

@@ -45,7 +45,7 @@ const Advertising_List = () => {
                     }}>
                         <View style={{ alignSelf: 'center', alignItems:'center'}}>
                             <Text style={{ fontSize: 20, color: '#ffffff', fontWeight: '800', width: '70%' }}>{item.text}</Text>
-                            <Text style={{ fontSize: 15, color: '#ffffff', fontWeight: '800', width: '70%', marginTop: 5 }}>{item.des}</Text>
+                            <Text style={{ fontSize: 15, color: '#ffffff', fontWeight: '400', width: '70%', marginTop: 5 }}>{item.des}</Text>
                             <View style={{ flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'flex-end', marginTop:'17%', alignContent:'flex-end', marginLeft:'25%', marginBottom:'2%'}}>{circles}</View>
                         </View>
                         <View style={{marginLeft:'-5%', marginTop:'5%'}}>

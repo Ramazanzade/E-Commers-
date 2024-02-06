@@ -21,7 +21,7 @@ const Category_List = () => {
         uniqueCategories.add(item.category.name);
 
         return (
-            <TouchableOpacity style={{ display: 'flex', flexDirection: 'row', backgroundColor: 'rgba(242, 244, 247, 1)', borderRadius: 10, marginHorizontal: 10, marginTop: '7%' }}>
+            <TouchableOpacity style={{ display: 'flex', flexDirection: 'row', backgroundColor: '#E4E7EC', borderRadius: 10, marginHorizontal: 10, marginTop: '7%' }}>
                 <Text style={{ color: 'rgba(29, 41, 57, 1)', fontWeight: '500', fontSize: 20, margin: 10 }}>{item.category.name}</Text>
                 <Image
                     source={{ uri: item.category.image }}

@@ -26,7 +26,7 @@ const Favorit_List = ({ navigation }: any) => {
     }
     const renderItem = ({ item }: any) => {
         return (
-            <TouchableOpacity style={{ marginHorizontal: 20, backgroundColor: 'rgba(255, 255, 255, 1)', borderRadius: 20, marginTop:'5%' }} onPress={() => {handlepres(item)}}>
+            <TouchableOpacity style={{ marginHorizontal: 10, backgroundColor: 'rgba(255, 255, 255, 1)', borderRadius: 20, marginTop:'5%' }} onPress={() => {handlepres(item)}}>
                 <View style={{ position: 'relative', padding: 10 }}>
                     <Image
                         source={{ uri: item.images[0] }}
@@ -85,7 +85,7 @@ const Favorit_List = ({ navigation }: any) => {
         )
     }
     return (
-        <View>
+        <View style={{alignSelf:'center'}}>
             <FlatList
                 data={data.products}
                 renderItem={(item) => renderItem(item)}

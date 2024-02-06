@@ -50,7 +50,7 @@ const AddBasket_List = ({ route }: any) => {
                 <View>
                     <Image
                         source={{ uri: item.images[0] }}
-                        style={{ width: 70, height: 70, borderRadius: 10 }}
+                        style={{ width: 80, height: 80, borderRadius: 10, alignSelf:"center" }}
                     />
                 </View>
                 <View style={{ flex: 1, marginHorizontal: '5%' }}>
@@ -67,15 +67,15 @@ const AddBasket_List = ({ route }: any) => {
                     </View>
                     <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginTop: '2%' }}>
                         <View>
-                            <Text style={{ fontSize: 20, fontWeight: '600', color: 'rgba(29, 41, 57, 1)' }}>₼{data_total}</Text>
+                            <Text style={{ fontSize: 15, fontWeight: '600', color: 'rgba(29, 41, 57, 1)' }}>₼{data_total}</Text>
                         </View>
-                        <View style={{ display: 'flex', flexDirection: 'row', backgroundColor: 'rgba(249, 250, 251, 1)', borderRadius: 20, paddingHorizontal: '7%', borderWidth: 1, borderColor: 'rgba(228, 231, 236, 1)' }}>
+                        <View style={{ display: 'flex', flexDirection: 'row', backgroundColor: 'rgba(249, 250, 251, 1)', borderRadius: 20, paddingHorizontal: '7%', borderWidth: 2, borderColor: 'rgba(228, 231, 236, 1)' }}>
                             <TouchableOpacity onPress={() => handleMinus(itemId)} >
-                                <Text style={{ fontSize: 25, fontWeight: '400', color: 'rgba(29, 41, 57, 1)' }}>-</Text>
+                                <Text style={{ fontSize: 20, fontWeight: '400', color: 'rgba(29, 41, 57, 1)' }}>-</Text>
                             </TouchableOpacity>
-                            <Text style={{ fontSize: 20, fontWeight: '400', color: 'rgba(29, 41, 57, 1)', marginHorizontal: 10, textAlign: 'center', alignSelf: 'center' }}>{count}</Text>
+                            <Text style={{ fontSize: 15, fontWeight: '400', color: 'rgba(29, 41, 57, 1)', marginHorizontal: 10, textAlign: 'center', alignSelf: 'center' }}>{count}</Text>
                             <TouchableOpacity onPress={() => handlePlus(itemId)} style={{}}>
-                                <Text style={{ fontSize: 25, fontWeight: '300', color: 'rgba(29, 41, 57, 1)' }}>+</Text>
+                                <Text style={{ fontSize: 20, fontWeight: '300', color: 'rgba(29, 41, 57, 1)' }}>+</Text>
                             </TouchableOpacity>
                         </View>
                     </View>
