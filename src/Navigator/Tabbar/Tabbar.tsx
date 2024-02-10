@@ -16,16 +16,17 @@ import ProfileIcon1 from '../../assets/icon/user.svg';
 const Tab = createBottomTabNavigator();
 
 
-const Tabbar = () => {
+const Tabbar = ({navigation}:any) => {
   return (
     <Tab.Navigator
       screenOptions={({ route}: any) => ({
         headerShown: false,
+        tabBarActiveTintColor:'red',
         tabBarStyle: {
-          height: 60,
+          height: 50,
           shadowOffset: {
             width: 0,
-            height: 0,
+            height: 30,
           },
         },
         tabBarIcon: ({ color, size, focused }: any) => {

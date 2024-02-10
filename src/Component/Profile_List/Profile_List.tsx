@@ -20,8 +20,8 @@ import Campaigns from '../../assets/icon/percentage-square.svg'
 const Profile_List = ({navigation}:any) => {
     const data = useSelector((state: any) => state.ProfileListReducer.value)
     const icons = {
-        truck: Order,
-        heart: Favorites,
+        truck:Order,
+        heart:Favorites,
         star:Reviews,
         add:Informations,
         messages:Messages,

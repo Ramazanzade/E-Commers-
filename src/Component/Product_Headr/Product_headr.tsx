@@ -66,15 +66,15 @@ const Product_headr = ({ navigation }: any) => {
         <View style={{position:'absolute',zIndex:-1}}>
             <View style={{ position: 'absolute', zIndex: 2, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: SCREEN_WIDTH - 40, alignSelf: 'center', marginTop: '5%' }}>
                 <TouchableOpacity style={{ backgroundColor: 'rgba(255, 255, 255, 1)', borderRadius: 30, padding: '2%', width: 45, height: 43 }} onPress={() => goback()}>
-                    <Left height={30} width={30} />
+                    <Left height={30} width={30}  />
                 </TouchableOpacity>
                 <TouchableOpacity style={{ backgroundColor: 'rgba(255, 255, 255, 1)', borderRadius: 30, padding: '2%', width: 45, height: 43, alignSelf: 'center' }} onPress={() => handle()}>
                     {isFavorite ? (
-                        <View style={{ alignSelf: 'center', alignItems: 'center', alignContent: 'center' }}>
+                        <View style={{ alignSelf: 'center', alignItems: 'center', alignContent: 'center', marginTop:'5%' }}>
                             <IsHeart width={25} height={25} />
                         </View>
                     ) : (
-                        <View style={{ alignSelf: 'center', alignItems: 'center', alignContent: 'center' }}>
+                        <View style={{ alignSelf: 'center', alignItems: 'center', alignContent: 'center', marginTop:'5%' }}>
                             <Heart width={25} height={25} />
                         </View>
                     )}

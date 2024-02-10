@@ -30,10 +30,10 @@ const Product_Detail = () => {
             <View style={{ display: 'flex', flexDirection: 'column', marginBottom: '5%' }}>
                 <View style={{ display: 'flex', flexDirection: 'row', width: SCREEN_WIDTH - 40, alignSelf: 'center', marginTop: '9%' }}>
                     <TouchableOpacity style={{ backgroundColor: activeTab === 'Description' ? 'rgba(246, 61, 104, 1)' : 'transparent', paddingHorizontal: '4%', paddingVertical: '2%', borderRadius: 20 }} onPress={() => handleTabPress('Description')}>
-                        <Text style={{ fontSize: 20, fontWeight: '600', color: activeTab === 'Description' ? 'white' : 'black' }}>Description</Text>
+                        <Text style={{ fontSize: 17, fontWeight: '600', color: activeTab === 'Description' ? 'white' : 'black' }}>Description</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={{ backgroundColor: activeTab === 'Reviews' ? 'rgba(246, 61, 104, 1)' : 'transparent', paddingHorizontal: '4%', paddingVertical: '2%', borderRadius: 20 }} onPress={() => handleTabPress('Reviews')}>
-                        <Text style={{ fontSize: 20, fontWeight: '600', color: activeTab === 'Reviews' ? 'white' : 'black' }}>Reviews</Text>
+                        <Text style={{ fontSize: 17, fontWeight: '600', color: activeTab === 'Reviews' ? 'white' : 'black' }}>Reviews</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={{ width: SCREEN_WIDTH - 60, alignSelf: 'center', marginTop: '5%' }}>
