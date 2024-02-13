@@ -4,12 +4,14 @@ import {advertisingReducer} from './Feature/Advertising/AdvertisingSlice'
 import { cupponReducer } from "./Feature/Cuppon/CupponSlice";
 import { userReducer } from "./Feature/User/UserSlice";
 import { ProfileListReducer } from "./Feature/Profile_List/Profile_ListSlice";
+// import {OnboardingReducer} from './Feature/Onboarding/OnboardingSlice'
 const rootReducers = combineReducers({
     productReducer,
     advertisingReducer,
     cupponReducer,
     userReducer,
-    ProfileListReducer
+    ProfileListReducer,
+    // OnboardingReducer
 })
 
 export const store = configureStore({

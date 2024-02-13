@@ -1,12 +1,18 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React from 'react';
+import { View } from 'react-native';
+import LottieView from 'lottie-react-native';
 
 const Splas_Loading = () => {
   return (
-    <View>
-      <Text>Splas_Loading</Text>
+    <View style={{ flex: 1 }}>
+      <LottieView
+        source={require('../../assets/splasscreen_json/loading.json')}
+        autoPlay
+        loop
+        style={{ flex: 1 }}
+      />
     </View>
-  )
-}
+  );
+};
 
-export default Splas_Loading
+export default Splas_Loading;

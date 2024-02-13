@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { View, Text, Animated, Image } from 'react-native';
 import Splas_Loading from '../../Constans/Splas_Loading/Splas_Loading';
-import Flower from '../../assets/imge/Flowers.svg'
 import { SCREEN_WIDTH } from '../../Utils/common';
 
-const Splash = () => {
+const Splash = ({ navigation }: any) => {
     const [backgroundColor, setBackgroundColor] = useState('transparent');
-    const [textOpacity] = useState(new Animated.Value(0));
+    const textOpacity = useRef(new Animated.Value(0)).current;
     const [imgeOpacity] = useState(new Animated.Value(0));
 
     useEffect(() => {
@@ -16,16 +15,21 @@ const Splash = () => {
 
         Animated.timing(textOpacity, {
             toValue: 1,
-            duration: 1000,
+            duration: 500,
             delay: 3000,
             useNativeDriver: true,
         }).start();
         Animated.timing(imgeOpacity, {
             toValue: 1,
-            duration: 1000,
-            delay: 3500,
+            duration: 500,
+            delay: 3000,
             useNativeDriver: true,
         }).start();
+        setTimeout(() => {
+            navigation.navigate('Splas_Loading');
+        }, 4000);
+
+
 
     }, []);
 
@@ -37,11 +41,11 @@ const Splash = () => {
                     transform: [{ translateY: textOpacity.interpolate({ inputRange: [0, 1], outputRange: [-200, 0] }) }],
                     width: SCREEN_WIDTH,
                 }}
-                source={require('../../assets/imge/2.png')}
+                source={require('../../assets/imge/Splasscreen_imge/2.png')}
 
             />
-            <Animated.View style={{transform: [{ translateY: textOpacity.interpolate({ inputRange: [0, 1], outputRange: [-10, 0] }) }]}}>
-                <Animated.Text style={{ opacity: textOpacity, textAlign: 'center', color: '#FFFFFF', fontSize: 50, fontWeight: '600' }}>
+            <Animated.View style={{ transform: [{ translateY: textOpacity.interpolate({ inputRange: [0, 1], outputRange: [-30, 0] }) }] }}>
+                <Animated.Text style={{ opacity: textOpacity, textAlign: 'center', color: '#FFFFFF', fontSize: 50, fontWeight: '600', }}>
                     Bloomify.
                 </Animated.Text>
             </Animated.View>
@@ -52,7 +56,7 @@ const Splash = () => {
                         transform: [{ translateY: textOpacity.interpolate({ inputRange: [0, 1], outputRange: [200, 60] }) }],
                         alignSelf: 'center'
                     }}
-                    source={require('../../assets/imge/4.png')}
+                    source={require('../../assets/imge/Splasscreen_imge/4.png')}
                 />
                 <Animated.Image
                     style={{
@@ -60,7 +64,7 @@ const Splash = () => {
                         transform: [{ translateY: textOpacity.interpolate({ inputRange: [0, 1], outputRange: [200, 0] }) }],
                         width: SCREEN_WIDTH
                     }}
-                    source={require('../../assets/imge/3.png')}
+                    source={require('../../assets/imge/Splasscreen_imge/3.png')}
                 />
             </View>
         </View>
