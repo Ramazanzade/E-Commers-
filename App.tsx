@@ -23,10 +23,10 @@ const App = () => {
         <Stack.Screen name="AddtoBasket_Button" component={AddtoBasket_Button} />
         <Stack.Screen name="AddBasket_List" component={AddBasket_List} />
         <Stack.Screen name="ProductScreen" component={ProductScreen} /> */}
-        <Stack.Screen name="SplaScreen" component={SplaScreen} />
-        <Stack.Screen name="OnboardingScreen" component={OnboardingScreen} />
-        <Stack.Screen name="AccountSetupScreen" component={AccountSetupScreen} />
-        <Stack.Screen name="LoginScreen" component={LoginScreen} />
+        {/* <Stack.Screen name="SplaScreen" component={SplaScreen} /> */}
+        {/* <Stack.Screen name="OnboardingScreen" component={OnboardingScreen} />
+        <Stack.Screen name="AccountSetupScreen" component={AccountSetupScreen} /> */}
+        {/* <Stack.Screen name="LoginScreen" component={LoginScreen} /> */}
         <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
       </Stack.Navigator>
     </NavigationContainer>

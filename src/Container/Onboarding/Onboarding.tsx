@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { View, Text, Image, SafeAreaView, StatusBar, FlatList, TouchableOpacity, Dimensions } from 'react-native';
 import { useSelector } from 'react-redux';
 import { SCREEN_HEIGHT, SCREEN_WIDTH } from '../../Utils/common';
+import LottieView from 'lottie-react-native';
 import Splas_Loading from '../../Constans/Splas_Loading/Splas_Loading';
 
 const images = [
@@ -26,7 +27,8 @@ const Slide = ({ item }: any) => {
 
 const Onboarding = ({ navigation }: any) => {
     const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
-   const ref = useRef<any>();
+    const [isLoading, setIsLoading] = useState(false);
+    const ref = useRef<any>();
     const updateCurrentSlideIndex = (e: any) => {
         const contentOffsetX = e.nativeEvent.contentOffset.x;
         const currentIndex = Math.round(contentOffsetX / SCREEN_WIDTH);
@@ -48,7 +50,14 @@ const Onboarding = ({ navigation }: any) => {
         ref.current.scrollToOffset({ offset });
         setCurrentSlideIndex(lastSlideIndex);
     };
+    const goaccountpage = () => {
+        setIsLoading(true);
+        setTimeout(() => {
+            setIsLoading(false);
+            navigation.navigate('AccountSetupScreen')
+        }, 3000);
 
+    }
     const Footer = () => {
         return (
             <View style={{ height: SCREEN_HEIGHT * 0.2, justifyContent: 'space-between', paddingHorizontal: 20 }}>
@@ -68,7 +77,7 @@ const Onboarding = ({ navigation }: any) => {
                         <View style={{ height: 60 }}>
                             <TouchableOpacity
                                 style={[{ flex: 1, height: 100, width: SCREEN_WIDTH - 40, borderRadius: 70, backgroundColor: '#F63D68', justifyContent: 'center', alignItems: 'center' }, { backgroundColor: '#F63D68' }]}
-                                onPress={() =>navigation.navigate('AccountSetupScreen')}>
+                                onPress={() => goaccountpage()}>
                                 <Text style={{ fontWeight: 'bold', fontSize: 15, color: '#FFFFFF' }}>Get Start</Text>
                             </TouchableOpacity>
                         </View>
@@ -96,17 +105,24 @@ const Onboarding = ({ navigation }: any) => {
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#FFFFFF' }}>
-            <FlatList
-                ref={ref}
-                onMomentumScrollEnd={updateCurrentSlideIndex}
-                contentContainerStyle={{ height: SCREEN_HEIGHT * 0.75 }}
-                showsHorizontalScrollIndicator={false}
-                horizontal
-                data={images}
-                pagingEnabled
-                renderItem={({ item }) => <Slide item={item} />}
-            />
-            <Footer />
+            {isLoading ? (
+                <Splas_Loading />
+            ) : (
+                <View>
+                    <FlatList
+                        ref={ref}
+                        onMomentumScrollEnd={updateCurrentSlideIndex}
+                        contentContainerStyle={{ height: SCREEN_HEIGHT * 0.75 }}
+                        showsHorizontalScrollIndicator={false}
+                        horizontal
+                        data={images}
+                        pagingEnabled
+                        renderItem={({ item }) => <Slide item={item} />}
+                    />
+                    <Footer />
+                </View>
+            )}
+
         </SafeAreaView>
     );
 };
