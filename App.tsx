@@ -20,17 +20,16 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-      {/* <Stack.Screen name="LoginScreen" component={LoginScreen} /> */}
-        {/* <Stack.Screen name="RegisterScreen" component={RegisterScreen} /> */}
+        <Stack.Screen name="SplaScreen" component={SplaScreen} />
+        <Stack.Screen name="OnboardingScreen" component={OnboardingScreen} />
+        <Stack.Screen name="AccountSetupScreen" component={AccountSetupScreen} />
+        <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
         <Stack.Screen name="ForgotOtpScreen" component={ForgotOtpScreen} />
-        {/* <Stack.Screen name="Tabbar" component={Tabbar} /> */}
-        {/* <Stack.Screen name="AddtoBasket_Button" component={AddtoBasket_Button} /> */}
-        {/* <Stack.Screen name="AddBasket_List" component={AddBasket_List} /> */}
-        {/* <Stack.Screen name="ProductScreen" component={ProductScreen} /> */}
-        {/* <Stack.Screen name="SplaScreen" component={SplaScreen} /> */}
-        {/* <Stack.Screen name="OnboardingScreen" component={OnboardingScreen} /> */}
-        {/* <Stack.Screen name="AccountSetupScreen" component={AccountSetupScreen} /> */}
-
+        <Stack.Screen name="LoginScreen" component={LoginScreen} />
+        <Stack.Screen name="Tabbar" component={Tabbar} />
+        <Stack.Screen name="AddtoBasket_Button" component={AddtoBasket_Button} />
+        <Stack.Screen name="AddBasket_List" component={AddBasket_List} />
+        <Stack.Screen name="ProductScreen" component={ProductScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
