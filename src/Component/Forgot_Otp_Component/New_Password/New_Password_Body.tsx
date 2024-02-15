@@ -47,14 +47,14 @@ const New_Password_Body = ({navigation}:any) => {
     <View style={{display:'flex',flex:1,flexDirection:'column',justifyContent:'space-between'}}>
       <View>
         <View style={{ position: 'relative', width: SCREEN_WIDTH - 30, alignSelf: 'center' }}>
-          <Text style={{ position: 'absolute', top: -10, left: 20, zIndex: 1, backgroundColor: 'white', paddingHorizontal: 5, fontSize: 14 }}>
+          <Text style={{ position: 'absolute', top: -15, left: 20, zIndex: 1, backgroundColor: 'white', paddingHorizontal: 5, fontSize: 11, color:'rgba(172, 181, 187, 1)' }}>
             New Password
           </Text>
           <TextInput
             onChangeText={setpaswword}
             value={hideText ? paswword.replace(/./g, '*') : paswword}
             placeholder='Enter your new password'
-            style={{ borderWidth: 1, borderColor: '#DCE4E8', borderRadius: 50, width: SCREEN_WIDTH - 30, alignSelf: 'center', textAlign: 'left', paddingLeft: 25, fontSize: 15, color: '#ACB5BB', padding: '4%' }}
+            style={{ borderWidth: 1, borderColor: '#DCE4E8', borderRadius: 50, width: SCREEN_WIDTH - 30, alignSelf: 'center', textAlign: 'left', paddingLeft: 25, fontSize: 13, color: '#ACB5BB', padding: '4%' }}
             placeholderTextColor='#ACB5BB'
           />
           <View style={{ position: 'absolute', zIndex: 1, alignItems: 'flex-end', marginTop: '5%', alignSelf: 'flex-end', paddingRight: '28%' }}>
@@ -68,14 +68,14 @@ const New_Password_Body = ({navigation}:any) => {
           </View>
         </View>
         <View style={{ position: 'relative', width: SCREEN_WIDTH - 30, alignSelf: 'center', marginTop: '10%' }}>
-          <Text style={{ position: 'absolute', top: -10, left: 20, zIndex: 1, backgroundColor: 'white', paddingHorizontal: 5, fontSize: 14 }}>
+          <Text style={{ position: 'absolute', top: -15, left: 20, zIndex: 1, backgroundColor: 'white', paddingHorizontal: 5, fontSize: 11, color:'rgba(172, 181, 187, 1)' }}>
             Confirm Password
           </Text>
           <TextInput
             onChangeText={setoterpaswword}
             value={oterhideText ? oterpaswword.replace(/./g, '*') : oterpaswword}
             placeholder='Enter your confirm password'
-            style={{ borderWidth: 1, borderColor: '#DCE4E8', borderRadius: 50, width: SCREEN_WIDTH - 30, alignSelf: 'center', textAlign: 'left', paddingLeft: 25, fontSize: 15, color: '#ACB5BB', padding: '4%' }}
+            style={{ borderWidth: 1, borderColor: '#DCE4E8', borderRadius: 50, width: SCREEN_WIDTH - 30, alignSelf: 'center', textAlign: 'left', paddingLeft: 25, fontSize: 12, color: '#ACB5BB', padding: '4%' }}
             placeholderTextColor='#ACB5BB'
           />
           <View style={{ position: 'absolute', zIndex: 1, alignItems: 'flex-end', marginTop: '5%', alignSelf: 'flex-end', paddingRight: '28%' }}>
@@ -95,7 +95,7 @@ const New_Password_Body = ({navigation}:any) => {
       </View>
       <View style={{marginBottom:'12%'}}>
         <TouchableOpacity style={{ backgroundColor: signInColor, borderRadius: 50, width: SCREEN_WIDTH - 30, alignSelf: 'center', padding: '4%' }} onPress={New}>
-          <Text style={{ textAlign: 'center', fontSize: 20, color: signInColortext, fontWeight: '500' }}>Reset Password</Text>
+          <Text style={{ textAlign: 'center', fontSize: 15, color: signInColortext, fontWeight: '500' }}>Reset Password</Text>
         </TouchableOpacity>
         <Modal
                     animationType="slide"

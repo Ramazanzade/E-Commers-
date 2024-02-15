@@ -10,9 +10,9 @@ import Apple from '../../assets/imge/AccountSetup_imge/apple-seeklogo.com 1.svg'
 const Register_anothere = () => {
     return (
         <View>
-            <View style={{ width: SCREEN_WIDTH - 40, alignSelf: 'center', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+            <View style={{ width: SCREEN_WIDTH - 40, alignSelf: 'center', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' , marginTop:'5%'}}>
                 <View style={{ height: 1, backgroundColor: '#D0D5DD', width: SCREEN_WIDTH / 2.6, borderRadius: 50, }}></View>
-                <View><Text style={{ color: '#D0D5DD', fontSize: 20, fontWeight: '600' }}>Or</Text></View>
+                <View><Text style={{ color: '#D0D5DD', fontSize: 15, fontWeight: '600' }}>Or</Text></View>
                 <View style={{ height: 1, backgroundColor: '#D0D5DD', width: SCREEN_WIDTH / 2.6, borderRadius: 50 }}></View>
             </View>
                 <View style={{ display: 'flex', flexDirection: 'row', marginTop: '7%', alignSelf:'center'}}>

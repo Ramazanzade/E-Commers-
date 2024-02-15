@@ -36,7 +36,7 @@ const Register = ({ navigation }: any) => {
                 <Register_Headr />
                 <Register_inuput navigation={navigation} onRegister={handleRegister} />
                 <Register_anothere />
-                <View style={{ marginTop: '7%' }}>
+                <View style={{ marginTop: '10%' }}>
                     <Register_Footer navigation={navigation} />
                 </View>
             </Animated.View>

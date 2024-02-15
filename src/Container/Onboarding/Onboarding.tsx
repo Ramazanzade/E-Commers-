@@ -87,7 +87,7 @@ const Onboarding = ({ navigation }: any) => {
                                 activeOpacity={0.8}
                                 style={[{ flex: 1, height: 60, borderRadius: 50, backgroundColor: '#fff', justifyContent: 'center', alignItems: 'center' }, { backgroundColor: '#F2F4F7' }]}
                                 onPress={skip}>
-                                <Text style={{ fontWeight: 'bold', fontSize: 20 }}>Skip</Text>
+                                <Text style={{ fontWeight: 'bold', fontSize: 20 , color:'rgba(102, 112, 133, 1)'}}>Skip</Text>
                             </TouchableOpacity>
                             <View style={{ width: 15 }} />
                             <TouchableOpacity

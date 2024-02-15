@@ -13,8 +13,8 @@ const OTP_Headr = ({navigation}:any) => {
             </View>
             <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginTop: '-5%' , width:SCREEN_WIDTH}}>
                     <View style={{alignSelf:'center', marginLeft:'5%', marginTop:'15%', width:'80%'}}>
-                        <Text style={{ fontSize: 30, color: '#1A1C1E', fontWeight: '900' }}>OTP Verification</Text>
-                        <Text style={{ color: '#6C7278', fontWeight: '400', fontSize: 15 , marginTop:'5%'}}>Please check your email to see the verification code</Text>
+                        <Text style={{ fontSize: 25, color: '#1A1C1E', fontWeight: '900' }}>OTP Verification</Text>
+                        <Text style={{ color: '#6C7278', fontWeight: '400', fontSize: 14 , marginTop:'5%'}}>Please check your email to see the verification code</Text>
                     </View>
                 <View style={{}}>
                     <Start />

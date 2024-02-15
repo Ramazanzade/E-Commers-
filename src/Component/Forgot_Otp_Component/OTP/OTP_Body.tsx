@@ -129,7 +129,7 @@ const OTP_Body = ({ navigation }: any) => {
           </View>
             <View style={{marginBottom:'10%'}}>
                 <TouchableOpacity style={{ backgroundColor: '#F63D68', borderRadius: 50, width: SCREEN_WIDTH - 30, alignSelf: 'center', padding: '4%' }} onPress={()=>navigation.navigate('New_Password')}>
-                    <Text style={{ textAlign: 'center', fontSize: 20, color: '#F2F4F7', fontWeight: '500' }}>Verify</Text>
+                    <Text style={{ textAlign: 'center', fontSize: 15, color: '#F2F4F7', fontWeight: '500' }}>Verify</Text>
                 </TouchableOpacity>
             </View>
         </View>

@@ -6,8 +6,8 @@ const Register_Headr = () => {
     return (
         <Animated.View style={{display:'flex',flexDirection:'row',justifyContent:'space-between', width:SCREEN_WIDTH-20, alignSelf:'flex-end'}}>
             <View style={{alignSelf:"center"}}>
-                <Text style={{color:'#1A1C1E', fontSize:40, fontWeight:'700'}}>Sign in to your Account</Text>
-                <Text style={{color:'#6C7278', fontSize:20, fontWeight:'300', marginTop:'2%'}}>Welcome back to our community!</Text>
+                <Text style={{color:'#1A1C1E', fontSize:30, fontWeight:'700'}}>Sign in to your Account</Text>
+                <Text style={{color:'#6C7278', fontSize:15, fontWeight:'300', marginTop:'2%'}}>Welcome back to our community!</Text>
             </View>
             <View>
                 <Register height={200} width={100}/>

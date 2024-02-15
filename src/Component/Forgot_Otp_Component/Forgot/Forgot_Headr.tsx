@@ -19,8 +19,8 @@ const Forgot_Headr = ({ navigation }: any) => {
                         <One/>
                     </View>
                     <View style={{width:'80%', alignSelf:'center', marginLeft:'-10%'}}>
-                        <Text style={{ fontSize: 30, color: '#1A1C1E', fontWeight: '800' }}>Forgot Password</Text>
-                        <Text style={{ color: '#6C7278', fontWeight: '400', fontSize: 15 }}>Enter your email account to reset your password</Text>
+                        <Text style={{ fontSize: 20, color: '#1A1C1E', fontWeight: '800' }}>Forgot Password</Text>
+                        <Text style={{ color: '#6C7278', fontWeight: '400', fontSize: 13 }}>Enter your email account to reset your password</Text>
                     </View>
                 </View>
                 <View style={{ marginTop: '-2%' }}>

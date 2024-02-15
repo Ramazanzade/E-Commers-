@@ -23,7 +23,7 @@ const Login = ({navigation}:any) => {
                 <View>
                     <Login_Header />
                     <Login_Input  navigation={navigation} onRegister={handleRegister}/>
-                    <Login_Footer />
+                    <Login_Footer navigation={navigation} />
                 </View>
             )}
     </View>

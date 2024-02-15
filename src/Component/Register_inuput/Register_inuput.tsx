@@ -51,7 +51,7 @@ const Register_inuput = ({ navigation, onRegister }: any) => {
                         onChangeText={setemail}
                         value={email}
                         placeholder='Enter your email or number'
-                        style={{ borderWidth: 1, borderColor: '#DCE4E8', borderRadius: 50, width: SCREEN_WIDTH - 30, alignSelf: 'center', textAlign: 'left', paddingLeft: 25, fontSize: 17, color: '#ACB5BB', padding: '4%' }}
+                        style={{ borderWidth: 1, borderColor: '#DCE4E8', borderRadius: 50, width: SCREEN_WIDTH - 30, alignSelf: 'center', textAlign: 'left', paddingLeft: 25, fontSize: 13, color: '#ACB5BB', padding: '4%' }}
                         placeholderTextColor='#ACB5BB'
                     />
                 </View>
@@ -60,7 +60,7 @@ const Register_inuput = ({ navigation, onRegister }: any) => {
                         onChangeText={setpaswword}
                         value={hideText ? paswword.replace(/./g, '*') : paswword}
                         placeholder='Enter your password'
-                        style={{ borderWidth: 1, borderColor: '#DCE4E8', borderRadius: 50, width: SCREEN_WIDTH - 30, alignSelf: 'center', textAlign: 'left', paddingLeft: 25, fontSize: 17, color: '#ACB5BB', padding: '4%' }}
+                        style={{ borderWidth: 1, borderColor: '#DCE4E8', borderRadius: 50, width: SCREEN_WIDTH - 30, alignSelf: 'center', textAlign: 'left', paddingLeft: 25, fontSize: 13, color: '#ACB5BB', padding: '4%' }}
                         placeholderTextColor='#ACB5BB'
                     />
                     <View style={{ position: 'absolute', zIndex: 1, alignItems: 'flex-end', marginTop: '5%', alignSelf: 'flex-end', paddingRight: '28%' }}>
@@ -74,13 +74,13 @@ const Register_inuput = ({ navigation, onRegister }: any) => {
                     </View>
                 </View>
                 </View>
-                <View style={{ position: 'relative', }}>
+                <View >
                     <View>
                         <Forgot_Paswword navigation={navigation} />
                     </View>
-                    <Animated.View style={{ position: 'absolute', zIndex: -1, alignSelf: 'center', marginTop: '30%', transform: [{ translateY: buttonOpacity.interpolate({ inputRange: [0, 1], outputRange: [-50, 0] }) }] }}>
+                    <Animated.View style={{ alignSelf: 'center',marginTop:'-8%', transform: [{ translateY: buttonOpacity.interpolate({ inputRange: [0, 1], outputRange: [-50, 0] }) }] }}>
                         <TouchableOpacity style={{ backgroundColor: signInColor, borderRadius: 50, width: SCREEN_WIDTH - 30, alignSelf: 'center', padding: '4%' }} onPress={SingIn}>
-                            <Text style={{ textAlign: 'center', fontSize: 20, color: signInColortext, fontWeight: '500' }}>Sign In</Text>
+                            <Text style={{ textAlign: 'center', fontSize: 15, color: signInColortext, fontWeight: '500' }}>Sign In</Text>
                         </TouchableOpacity>
                     </Animated.View>
                 </View>

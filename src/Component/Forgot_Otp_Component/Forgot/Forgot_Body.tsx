@@ -41,14 +41,14 @@ const Forgot_Body = ({ onRegister, navigation }: any) => {
         <View style={{ display: 'flex', flexDirection: 'column', justifyContent:'space-between', flex:1 }}>
           <View>
           <View style={{ position: 'relative', width: SCREEN_WIDTH - 30, alignSelf: 'center', marginVertical: '7%' }}>
-                <Text style={{ position: 'absolute', top: -10, left: 20, zIndex: 1, backgroundColor: 'white', paddingHorizontal: 5, fontSize: 14 }}>
+                <Text style={{ position: 'absolute', top: -13, left: 20, zIndex: 1, backgroundColor: 'white', paddingHorizontal: 5, fontSize: 14, color:'rgba(172, 181, 187, 1)' }}>
                     Email
                 </Text>
                 <TextInput
                     onChangeText={setemail}
                     value={email}
                     placeholder='Enter your email or number'
-                    style={{ borderWidth: 1, borderColor: '#DCE4E8', borderRadius: 50, width: SCREEN_WIDTH - 30, alignSelf: 'center', textAlign: 'left', paddingLeft: 25, fontSize: 17, color: '#ACB5BB', padding: '4%' }}
+                    style={{ borderWidth: 1, borderColor: '#DCE4E8', borderRadius: 50, width: SCREEN_WIDTH - 30, alignSelf: 'center', textAlign: 'left', paddingLeft: 25, fontSize: 15, color: 'rgba(52, 64, 84, 1)', padding: '4%' }}
                     placeholderTextColor='#ACB5BB'
                 />
             </View>
@@ -63,7 +63,7 @@ const Forgot_Body = ({ onRegister, navigation }: any) => {
           </View>
             <View style={{ alignSelf: 'center', marginBottom:'10%'}}>
                 <TouchableOpacity style={{ backgroundColor: signInColor, borderRadius: 50, width: SCREEN_WIDTH - 30, alignSelf: 'center', padding: '4%' }} onPress={Next}>
-                    <Text style={{ textAlign: 'center', fontSize: 20, color: signInColortext, fontWeight: '500' }}>Next</Text>
+                    <Text style={{ textAlign: 'center', fontSize: 15, color: signInColortext, fontWeight: '500' }}>Next</Text>
                 </TouchableOpacity>
                 <Modal
                     animationType="slide"
